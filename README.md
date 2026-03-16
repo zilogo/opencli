@@ -96,6 +96,7 @@ opencli doctor
 
 ```bash
 npm install -g @jackwener/opencli
+opencli setup   # One-time: configure Playwright MCP token
 ```
 
 Then use directly:
@@ -130,7 +131,7 @@ npm install -g @jackwener/opencli@latest
 
 | Site | Commands | Mode |
 |------|----------|------|
-| **bilibili** | `hot` `search` `me` `favorite` ... (11 commands) | 🔐 Browser |
+| **bilibili** | `hot` `search` `me` `favorite` `history` `feed` `subtitle` `dynamic` `ranking` `following` `user-videos` | 🔐 Browser |
 | **zhihu** | `hot` `search` `question` | 🔐 Browser |
 | **xiaohongshu** | `search` `notifications` `feed` `me` `user` | 🔐 Browser |
 | **xueqiu** | `feed` `hot-stock` `hot` `search` `stock` `watchlist` | 🔐 Browser |
@@ -197,6 +198,8 @@ Explore outputs to `.opencli/explore/<site>/` (manifest.json, endpoints.json, ca
   - Your login session in Chrome might have expired. Open a normal Chrome tab, navigate to the target site, and log in or refresh the page to prove you are human.
 - **Node API errors**
   - Make sure you are using Node.js >= 18. Some dependencies require modern Node APIs.
+- **Token issues**
+  - Run `opencli doctor` to diagnose token configuration across all tools.
 
 ## Releasing New Versions
 

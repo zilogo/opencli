@@ -96,6 +96,7 @@ opencli doctor
 
 ```bash
 npm install -g @jackwener/opencli
+opencli setup   # 首次使用：配置 Playwright MCP token
 ```
 
 直接使用：
@@ -130,7 +131,7 @@ npm install -g @jackwener/opencli@latest
 
 | 站点 | 命令 | 模式 |
 |------|------|------|
-| **bilibili** | `hot` `search` `me` `favorite` ...（共11个） | 🔐 浏览器 |
+| **bilibili** | `hot` `search` `me` `favorite` `history` `feed` `subtitle` `dynamic` `ranking` `following` `user-videos` | 🔐 浏览器 |
 | **zhihu** | `hot` `search` `question` | 🔐 浏览器 |
 | **xiaohongshu** | `search` `notifications` `feed` `me` `user` | 🔐 浏览器 |
 | **xueqiu** | `feed` `hot-stock` `hot` `search` `stock` `watchlist` | 🔐 浏览器 |
@@ -197,6 +198,8 @@ opencli cascade https://api.example.com/data
   - Chrome 里的登录态可能已经过期（甚至被要求过滑动验证码）。请打开当前 Chrome 页面，在新标签页重新手工登录或刷新该页面。
 - **Node API 错误 (如 parseArgs, fs 等)**
   - 确保 Node.js 版本 `>= 18`。旧版不支持我们使用的现代核心库 API。
+- **Token 问题**
+  - 运行 `opencli doctor` 诊断所有工具的 Token 配置状态。
 
 ## 版本发布
 
